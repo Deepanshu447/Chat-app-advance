@@ -16,7 +16,7 @@ export default function Sidebar({ currentUser, onlineUsers = [], onSelectUser })
   return (
     <div className="w-64 bg-white border-r h-full flex flex-col">
       {/* Header */}
-      <div className="p-4 font-bold border-b">
+      <div className="p-4 border-b">
         Logged in as: {currentUser}
       </div>
 
@@ -30,11 +30,12 @@ export default function Sidebar({ currentUser, onlineUsers = [], onSelectUser })
               <div
                 key={u}
                 onClick={() => onSelectUser(u)}
-                className="cursor-pointer flex items-center justify-between p-2 hover:bg-gray-100 rounded"
+                className="username-outer cursor-pointer"
               >
+                <div className="circle-username"></div>
                 <span>{u}</span>
                 <span
-                  className={`w-2 h-2 rounded-full ${
+                  className={`ml-auto w-2 h-2 rounded-full ${
                     isOnline ? "bg-green-500" : "bg-gray-400"
                   }`}
                 />
