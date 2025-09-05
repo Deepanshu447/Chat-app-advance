@@ -69,7 +69,7 @@ export default function ChatWindow({ user, targetUser }) {
 
   return (
     <div className="flex flex-col h-full">
-      <div className="p-3 bg-blue-600 text-white font-semibold">
+      <div className="p-3 text-white font-semibold chat-header">
         Chat with {targetUser}
       </div>
       <div className="flex-1 overflow-y-auto p-3 space-y-2 bg-gray-50">
